@@ -3,7 +3,7 @@ describe('Login', () => {
     cy.visit('https://www.saucedemo.com/')
   })
 
-  it('should log in successfully with valid credentials', () => {
+  it('Should log in successfully with valid credentials', () => {
     cy.get('[data-test="username"]').type('standard_user')
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
