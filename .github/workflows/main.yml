@@ -1,0 +1,29 @@
+name: Automated Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: API and UI Tests
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      ##- name: Run API tests
+       ## run: npm run api-test
+
+      - name: Run UI tests
+        run: npm run cypress:run
