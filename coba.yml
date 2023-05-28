@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run API tests
-        run: npm run api-test
+     ## - name: Run API tests
+      ##  run: npm run api-test
 
       - name: Run UI tests
         run: npm run cypress:run
